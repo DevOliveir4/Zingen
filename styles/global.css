@@ -58,6 +58,15 @@ body {
 a {
     text-decoration: none;
     color: inherit;
+
+    &:hover {
+        background: linear-gradient( var(--brand-linar-gradient));
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+
+        
+    }
 }
 
 ul[role="list"] {
