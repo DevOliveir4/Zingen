@@ -1,0 +1,72 @@
+.btn {
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+
+    border-radius: .5rem;
+    
+    font: var(--fw-medium) var(--fs-base)/1.5rem var(--ff-sans);
+
+    cursor: pointer;
+}
+
+.btn-primary {
+    --btn-background-color: var(--text-color-primary);
+    --btn-color: var(--background-color);
+    background: var(--btn-background-color);
+    color: var(--btn-color);
+
+    &:hover {
+        --btn-background-color: linear-gradient( var(--brand-linar-gradient));
+        --btn-color: var(--surface-color);
+    }
+}
+
+.btn-secondary {
+    --btn-background-color: var(--text-color-primary);
+    --btn-color: var(--background-color);
+    background: var(--btn-background-color);
+    color: var(--btn-color);
+    position: relative;
+
+    &:hover {
+        --btn-background-color: linear-gradient( var(--brand-linar-gradient));
+        --btn-color: var(--surface-color);
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        border-radius: inherit;
+        inset: 1.5px;
+        background: var(--background-color);
+    }
+
+    &::after {
+        content: attr(aria-label);
+        background: var(--btn-background-color);
+        -webbit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        position: relative;
+        z-index: 1;
+    }
+}
+
+.btn-small {
+    padding: .5rem 1rem;
+    font-size: var(--fs-small);
+}
+
+.btn-medium {
+    padding: .75rem 1.5rem;
+    font-size: var(--fs-base);    
+}
+
+.btn-large {
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
+}

@@ -1,0 +1,98 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box; 
+}
+
+ * {
+    padding: 0;
+    margin: 0;
+    font: inherit;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+    --brand-linar-gradient: 90deg, #FC4A1A, #F7B733;
+    --brand-color-primary: #F7B733; 
+    --brand-color-secondary: #FC4A1A;
+    --background-color: #09090B;
+    --surface-color: #18181B;
+    --stroke-color: #27272A; 
+    --text-color-secondary: #A1A1AA;
+    --text-color-primary: #F4F4F5;
+
+    --ff-sans: 'Inter', system-ui, sans-serif;
+
+    --fw-base: 400;
+    --fw-medium: 500;
+    --fw-bold: 800;
+
+    --fs-small: 0.875rem;
+    --fs-base: 1rem;
+    --fs-large: 1.25rem;
+    --fs-xlarge: 1.5rem;
+    --fs-xxlarge: 2.5rem;
+
+    --py-base: 1rem;
+    --py-large: 1.5rem;
+    --py-xlarge: 3rem;
+
+    --px-large: 1.5rem;
+
+}
+
+html {
+    font-family: var(--ff-sans);
+    font-weight: var(--fw-base);
+    font-size: var(--fs-base);
+    line-height: 1.6;
+    color: var(--text-color-primary);
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul[role="list"] {
+    list-style: none;
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+    color: var(--text-color-primary);
+    font-weight: var(--fw-bold);
+    letter-spacing: .04em;
+}
+
+h1 {
+    font-size: var(--fs-xxlarge); 
+}
+
+h2 {
+    font-size: var(--fs-xlarge);
+}
+
+h3 {
+    font-size: var(--fs-large);
+}
+
+@media (width>= 80em) {
+    :root {
+        -fs-large: 2em;
+        --fs-xlarge: 3rem;
+        --fs-xxlarge: 4rem;
+
+        --py-base: 1.5rem;
+        --py-large: 2.5rem;
+        --py-xlarge: 5rem;
+
+        --px-large: 2rem;
+    }
+}
